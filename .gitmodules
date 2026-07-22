@@ -1,0 +1,3 @@
+[submodule "ESD-BonitaSoft-Little-Caesar-BPM"]
+	path = ESD-BonitaSoft-Little-Caesar-BPM
+	url = git@github.com:AlonsoUNSA/ESD-BonitaSoft-Little-Caesar-BPM.git
