@@ -4,3 +4,6 @@
 [submodule "services/price-service"]
 	path = services/price-service
 	url = git@github.com:AlonsoUNSA/ESD-Little-Caesars-price-service.git
+[submodule "services/service-inventario"]
+	path = services/service-inventario
+	url = https://github.com/pieroadrianoCV/service-inventario.git
