@@ -1,3 +1,6 @@
 [submodule "ESD-BonitaSoft-Little-Caesar-BPM"]
 	path = ESD-BonitaSoft-Little-Caesar-BPM
 	url = git@github.com:AlonsoUNSA/ESD-BonitaSoft-Little-Caesar-BPM.git
+[submodule "services/price-service"]
+	path = services/price-service
+	url = git@github.com:AlonsoUNSA/ESD-Little-Caesars-price-service.git
