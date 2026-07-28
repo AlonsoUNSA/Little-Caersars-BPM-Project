@@ -7,3 +7,6 @@
 [submodule "services/service-inventario"]
 	path = services/service-inventario
 	url = https://github.com/pieroadrianoCV/service-inventario.git
+[submodule "services/service-clientes"]
+	path = services/service-clientes
+	url = https://github.com/KennyBorja/service-clientes.git
