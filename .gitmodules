@@ -10,3 +10,7 @@
 [submodule "services/service-clientes"]
 	path = services/service-clientes
 	url = https://github.com/KennyBorja/service-clientes.git
+[submodule "services/service-caja"]
+	path = services/service-caja
+	url = https://github.com/aqppaulet/Little-Caesars-Service-Caja.git
+	branch = main
