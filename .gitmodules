@@ -14,3 +14,6 @@
 	path = services/service-caja
 	url = https://github.com/aqppaulet/Little-Caesars-Service-Caja.git
 	branch = main
+[submodule "services/app-delivery"]
+	path = services/app-delivery
+	url = git@github.com:fhuaquistoq/DSE-Little-Caersars-App-Delivery.git
