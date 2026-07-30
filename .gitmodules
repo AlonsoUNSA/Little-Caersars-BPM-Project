@@ -17,3 +17,6 @@
 [submodule "services/app-delivery"]
 	path = services/app-delivery
 	url = git@github.com:fhuaquistoq/DSE-Little-Caersars-App-Delivery.git
+[submodule "services/littlecaesars"]
+	path = services/littlecaesars
+	url = https://github.com/rventurave/littlecaesars.git
