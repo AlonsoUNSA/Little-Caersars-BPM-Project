@@ -126,16 +126,6 @@ A continuación se presenta el análisis técnico de cada reporte de **SonarQube
 
 ---
 
-### 6. Vista Consolidada de Incidencias en el Repositorio Distribuido
-
-![SonarQube Lista Global](imagenes/WhatsApp%20Image%202026-07-30%20at%2010.20.07%20AM.jpeg)
-
-- **Módulo:** Repositorio Global de Servicios
-- **Análisis Técnico:**
-  Muestra el tablero panorámico de SonarQube escaneando la totalidad del proyecto `Little-Caersars-BPM-Project`. Permite auditar la deuda técnica acumulada (esfuerzo de remediación) y verificar que no existan vulnerabilidades de seguridad (*Security Hotspots*) de nivel Crítico en el backend.
-
----
-
 ### 7. service-inventario — Análisis de Código Python
 
 ![SonarQube Service Inventario](imagenes/WhatsApp%20Image%202026-07-30%20at%2010.20.25%20AM.jpeg)
