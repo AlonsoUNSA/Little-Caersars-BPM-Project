@@ -1,8 +1,22 @@
-# 📚 Informe de Recursos, Enlaces y Análisis de Calidad SonarQube
+# 📚 Informe de Servicios, Recursos, Enlaces y Calidad SonarQube
 
 **Organización:** Little Caesars BPM  
 **Proyecto:** Aplicación BPM en Entorno Distribuido con Servicios Web y Broker de Mensajes  
 **Repositorio Principal:** [Little-Caersars-BPM-Project](https://github.com/AlonsoUNSA/Little-Caersars-BPM-Project)  
+
+---
+
+## 🛠️ Descripción General de los Servicios Web del Proyecto
+
+El sistema distribuido de **Little Caesars BPM** está compuesto por microservicios desacoplados que dan soporte a las tareas automáticas del proceso de negocio:
+
+| Servicio / Módulo | Tecnología | Descripción y Responsabilidad en el Proceso |
+| :--- | :--- | :--- |
+| **`service-clientes`** | Java 21 + Spring Boot 3.3.2 | **Gestión de Clientes:** Registra nuevos clientes, valida datos únicos (teléfono/email), realiza bajas lógicas y publica el evento `cliente.registrado` en RabbitMQ para notificaciones asíncronas. |
+| **`service-caja`** | Java 21 + Spring Boot | **Gestión de Pago y Entrega:** Valida transacciones de pago en tienda, registra el método de pago seleccionado, genera el comprobante fiscal e informa el estado final de la entrega. |
+| **`service-inventario`** | Python 3.12 + FastAPI / Flask | **Consulta de Disponibilidad:** Verifica el stock e inventario en tiempo real de insumos, pizzas y bebidas antes de confirmar el registro del pedido en tienda. |
+| **`price-service`** | Java 21 + Spring Boot | **Cálculo de Precios y Total:** Calcula el monto total a pagar considerando precios unitarios, combos, promociones aplicables e impuestos. |
+| **`app-delivery`** | React / Node.js | **Aplicación Web / Frontend:** Interfaz de usuario (Application Page / Living App) para crear instancias del proceso, consultar el estado de pedidos y hacer seguimiento por rol. |
 
 ---
 
@@ -14,7 +28,7 @@
 | **[Submódulo `service-clientes`](https://github.com/KennyBorja/service-clientes)** | Repositorio GitHub (Kenny Borja) | Microservicio de gestión de clientes (Java 21 + Spring Boot 3.3.2). Implementa arquitectura DDD completa, eventos RabbitMQ, Swagger UI y TDD. |
 | **[Swagger UI — Service Clientes](http://localhost:8081/swagger-ui.html)** | Herramienta de Pruebas REST | Interfaz web OpenAPI interactiva para ejecutar y validar los endpoints (`POST`, `GET`, `PUT`, `DELETE`) del servicio de Clientes en puerto 8081. |
 | **[Consola H2 Database](http://localhost:8081/h2-console)** | Consola de BD | Permite inspeccionar las tablas relacionales y registros del servicio de Clientes (`jdbc:h2:mem:clientesdb`). |
-| **[Health Check — Clientes](http://localhost:8081/api/v1/clientes/health)** | Estado de Servicio | Verifica el estado activo (`UP`) del microservicio REST. |
+| **[Endpoint de Salud (Health Check)](http://localhost:8081/api/v1/clientes/health)** | Estado de Servicio | Verifica el estado activo (`UP`) del microservicio REST. |
 
 ---
 
@@ -49,7 +63,7 @@ A continuación se presenta el análisis técnico de cada reporte de **SonarQube
 - **Análisis Técnico:**
   - El uso de operaciones ternarias anidadas dificulta la lectura del flujo de la interfaz.
   - Usar el índice del array (`index`) como atributo `key` en React reduce el rendimiento del Virtual DOM cuando la lista se reordena o filtra.
-- **Solución Recomendada:** Extraer lógica a funciones auxilares y asignar IDs únicos como `key` en componentes React.
+- **Solución Recomendada:** Extraer lógica a funciones auxiliares y asignar IDs únicos como `key` en componentes React.
 
 ---
 
